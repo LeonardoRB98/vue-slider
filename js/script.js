@@ -18,6 +18,7 @@ let app = new Vue(
           this.currentImg = this.images.length - 1;
         }
       }
+
     }
   }
 );

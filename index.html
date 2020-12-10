@@ -13,10 +13,11 @@
       <div id="container">
         <img :src="images[currentImg]" alt="img">
         <div id="img_indicator">
-          <i class="far fa-circle" :class="index == currentImg ? 'fas': 'far'" v-for="(image, index) in images" ></i>
+          <i class="far fa-circle" :class="index == currentImg ? 'fas': 'far'" v-for="(image, index) in images" @click="dotsImage(index)">{{index}}</i>
         </div>
       </div>
       <i class="fas fa-chevron-right" @click='nextImage'></i>
+      <button type="button" name="button" @click="clearInterval(autoPlay)">stop!</button>
     </div>
     <script src="js/script.js" charset="utf-8"></script>
   </body>
